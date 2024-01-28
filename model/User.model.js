@@ -8,7 +8,7 @@ const UserSchema= mongoose.Schema({
     pass:String
 })
 const Usermodel=new mongoose.model("user",UserSchema)
-//12
+//1237
 module.exports=({
     Usermodel
 })
