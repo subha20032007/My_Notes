@@ -1,14 +1,19 @@
 const express=require("express")
 const { UserRouter } = require("./route/User.route")
 const { connection } = require("./config/db")
+const { noteRouter } = require("./route/Notes.route")
+const { authenticate } = require("./middlewares/authenticate.middleware")
 
 const app=express()
 const port=9090
 app.use(express.json())
-app.use("/user",UserRouter)
 app.get("/",(req,res)=>{
     res.send("home page")
 })
+app.use("/user",UserRouter)
+app.use(authenticate)
+app.use("/note",noteRouter)
+
 
 app.listen(port,async()=>{
 try{
