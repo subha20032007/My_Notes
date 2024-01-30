@@ -13,7 +13,7 @@ app.get("/",(req,res)=>{
 app.use("/user",UserRouter)
 app.use(authenticate)
 app.use("/note",noteRouter)
-//
+//1
 
 app.listen(port,async()=>{
 try{
