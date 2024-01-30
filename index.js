@@ -14,7 +14,7 @@ app.use("/user",UserRouter)
 app.use(authenticate)
 app.use("/note",noteRouter)
 
-//
+
 app.listen(port,async()=>{
 try{
 await connection
