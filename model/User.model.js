@@ -1,14 +1,14 @@
-
 const mongoose=require("mongoose")
 
-const UserSchema= mongoose.Schema({
+const UserSchema=mongoose.Schema({
     name:String,
-    age:Number,
     email:String,
+    age:Number,
     pass:String
 })
-const Usermodel=new mongoose.model("user",UserSchema)
 
-module.exports=({
-    Usermodel
-})
+const UserModel=new mongoose.model("user",UserSchema)
+
+module.exports={
+    UserModel
+}
