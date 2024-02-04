@@ -31,7 +31,7 @@ export const UpdateNote = () => {
    })
      
     }
-    //12345
+    //123456
   return (
     <div className='register'>
         <h1>Create A Note</h1>
