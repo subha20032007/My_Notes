@@ -18,7 +18,7 @@ export const UpdateNote = () => {
        
     }
     const handelSubmit=()=>{
-   axios.patch(`https://shy-teal-llama-cuff.cyclic.app/note/update/${id}`,data,{
+   axios.patch(`https://mushy-galoshes-ant.cyclic.app/note/update/${id}`,data,{
     headers:{
         Authorization:localStorage.getItem("token")
     }
@@ -36,7 +36,7 @@ export const UpdateNote = () => {
      
     }
 useEffect(()=>{
-axios.get(`https://shy-teal-llama-cuff.cyclic.app/${id}`,{
+axios.get(`https://mushy-galoshes-ant.cyclic.app/${id}`,{
     headers:{
         Authorization:localStorage.getItem("token")
     }

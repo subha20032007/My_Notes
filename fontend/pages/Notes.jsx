@@ -7,7 +7,7 @@ export const Notes = () => {
     const [note,setNote]=useState([])
 
     const getData=()=>{
-        axios.get("http://localhost:9090/note",{
+        axios.get("https://mushy-galoshes-ant.cyclic.app/note",{
             headers:{
                 Authorization:localStorage.getItem("token")
             }
@@ -20,7 +20,7 @@ export const Notes = () => {
         })
     }
     const handelDelete=(id)=>{
-      axios.delete(`https://shy-teal-llama-cuff.cyclic.app/note/delete/${id}`,{
+      axios.delete(`https://mushy-galoshes-ant.cyclic.app/note/delete/${id}`,{
         headers:{
             Authorization:localStorage.getItem("token")
         }
