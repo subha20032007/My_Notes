@@ -1,14 +1,14 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-
+import "../src/index.css"
 export const Navbar = () => {
   return (
-    <div style={{"display":"flex","justifyContent":'space-around'}}>
-        <Link to="/">Home</Link>
-        <Link to="/register">Register</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/createnote">Create Note</Link>
-        <Link to="/note">Notes</Link>
+    <div className='navbar'>
+        <Link className='noline' to="/">Home</Link>
+        <Link className='noline' to="/register">Register</Link>
+        <Link className='noline' to="/login">Login</Link>
+        <Link className='noline' to="/createnote">Create Note</Link>
+        <Link className='noline' to="/note">Notes</Link>
     </div>
   )
 }

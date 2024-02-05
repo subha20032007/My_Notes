@@ -13,7 +13,7 @@ export const Login = () => {
        
     }
     const handelSubmit=()=>{
-   axios.post("http://localhost:9090/user/login",data)
+   axios.post("https://shy-teal-llama-cuff.cyclic.app/user/login",data)
    .then((res)=>{
     console.log(res.data)
     localStorage.setItem("token",res.data)

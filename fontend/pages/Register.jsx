@@ -15,7 +15,7 @@ export const Register = () => {
        
     }
     const handelSubmit=()=>{
-   axios.post("http://localhost:9090/user/register",data)
+   axios.post("https://shy-teal-llama-cuff.cyclic.app/user/register",data)
    .then((res)=>{
     console.log(res)
      alert("registed")

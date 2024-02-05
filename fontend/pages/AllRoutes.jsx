@@ -6,6 +6,7 @@ import { Login } from './Login'
 import { Home } from './Home'
 import { CreateNote } from './CreateNote'
 import { Notes } from './Notes'
+import { UpdateNote } from './UpdateNote'
 export const AllRoutes = () => {
   return (
     <Routes>
@@ -14,7 +15,7 @@ export const AllRoutes = () => {
         <Route path="/login" element={<Login/>}/>
         <Route path="/createnote" element={<CreateNote/>}/>
         <Route path="/note" element={<Notes/>}/>
-        
+        <Route path="/update/:id" element={<UpdateNote/>}/>
     </Routes>
   )
 }

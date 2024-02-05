@@ -20,7 +20,7 @@ export const Notes = () => {
         })
     }
     const handelDelete=(id)=>{
-      axios.delete(`http://localhost:9090/note/delete/${id}`,{
+      axios.delete(`https://shy-teal-llama-cuff.cyclic.app/note/delete/${id}`,{
         headers:{
             Authorization:localStorage.getItem("token")
         }
@@ -44,7 +44,7 @@ export const Notes = () => {
                 <NoteTable 
                 key={el.id}
                 id={el._id}
-                title={el.note}
+                title={el.title}
                 note={el.note}
                       category={el.category} 
                       handelDelete={handelDelete}

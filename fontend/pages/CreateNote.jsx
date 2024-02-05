@@ -16,7 +16,7 @@ export const CreateNote = () => {
        
     }
     const handelSubmit=()=>{
-   axios.post("http://localhost:9090/note/create",data,{
+   axios.post("https://shy-teal-llama-cuff.cyclic.app/note/create",data,{
     headers:{
         Authorization:localStorage.getItem("token")
     }

@@ -1,37 +1,54 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../src/index.css"
 import axios from "axios"
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
 const initalState={
-    title:"natu note",
-    note:"natu eat mango",
-    category:"note"
+    title:"",
+    note:"",
+    category:""
    
 }
 export const UpdateNote = () => {
     const [data,setData]=useState(initalState)
-    console.log(data)
+    const {id}=useParams()
+  const navigate=useNavigate()
     const handelChange=(e)=>{
  const {name,value}=e.target
        setData({...data,[name]:value})
        
     }
     const handelSubmit=()=>{
-   axios.get("http://localhost:9090/note/update",{_id,id},{
+   axios.patch(`https://shy-teal-llama-cuff.cyclic.app/note/update/${id}`,data,{
     headers:{
         Authorization:localStorage.getItem("token")
     }
    })
    .then((res)=>{
     console.log(res)
-     alert("note created")
+     alert(res.data)
+    navigate("/note")
     setData(initalState)
+
    }).catch((err)=>{
     
     console.log("failed to write note")
    })
      
     }
-    //12345678910
+useEffect(()=>{
+axios.get(`https://shy-teal-llama-cuff.cyclic.app/${id}`,{
+    headers:{
+        Authorization:localStorage.getItem("token")
+    }
+   })
+.then((res)=>{
+setData(res.data)
+
+console.log(res.data)
+}).catch((err)=>{
+    console.log(err)
+})
+},[])
   return (
     <div className='register'>
         <h1>Create A Note</h1>
