@@ -4,7 +4,8 @@ const { UserRouter } = require("./Router/User.Router")
 const { NoteRouter } = require("./Router/Note.Router")
 const { authenticate } = require("./middleware/authenticate.middleware")
 const app=express()
-
+const cors=require("cors")
+app.use(cors({origin:"*"}))
 app.use(express.json())
 app.get("/",(req,res)=>{
     res.send("Home page")
