@@ -6,4 +6,3 @@ export const PrivateRoute = () => {
     <div>PrivateRoute</div>
   )
 }
-/
