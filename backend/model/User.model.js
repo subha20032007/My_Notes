@@ -12,5 +12,3 @@ const UserModel=new mongoose.model("user",UserSchema)
 module.exports={
     UserModel
 }
-
-//1
